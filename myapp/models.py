@@ -40,7 +40,8 @@ class Problems(models.Model):
 
 
 class logs(models.Model):
-    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    user = models.ForeignKey(User)
+    #problem_no = models.IntegerField(blank=False,default=1)
     answer = models.CharField(max_length=10000)
     time = models.DateTimeField(default=datetime.now)
     status = models.BooleanField(default = False)
