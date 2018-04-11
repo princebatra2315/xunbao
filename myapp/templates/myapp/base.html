@@ -54,21 +54,24 @@
 
             <!-- Items -->
             <div class="collapse navbar-collapse" id="topNavBar">   <!-- anything in this div is going to be hidden-->
-                <ul class="nav navbar-nav">
-                    <li class="">
-                        <a style="color: #43362c;" href="{% url 'myapp:index' %}">
-                            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp; Home
-                        </a>
-                    </li>
-                </ul>
-
                 <ul class="nav navbar-nav navbar-right">
+
                     <li class="">
                     {% if request.user.is_authenticated %}
                         <a style="color: #43362c;" href="">
                             <strong>Hey {{ user.first_name }}! </strong>
                         </a>
                     {% endif %}
+                    </li>
+                    <li class="">
+                        <a style="color: #43362c;" href="{% url 'myapp:index' %}">
+                            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp; Home
+                        </a>
+                    </li>
+                    <li class="">
+                        <a style="color: #43362c;font-weight: 600;" href="http://hackon.elementsculmyca.com">
+                            &nbsp; Hackon(A Cryptography Challenge)
+                        </a>
                     </li>
                     <li class="">
                         <a style="color: #43362c;" href="{% url 'myapp:leaderboard' %}">
