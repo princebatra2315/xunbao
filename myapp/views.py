@@ -20,7 +20,7 @@ from social_django.models import UserSocialAuth
 app_name = 'myapp'
 
 
-@login_required
+"""@login_required
 def index(request):
     user = request.user
     if not request.user.is_superuser :
@@ -77,8 +77,10 @@ def index(request):
 
 
 def my_login(request):
-    return render(request, 'myapp/register.html', {})
+    return render(request, 'myapp/register.html', {})"""
 
+def index(request):
+    return render(request,'index.html',{})
 
 def leaderboard(request):
     profiles = Profile.objects.all()
@@ -96,7 +98,7 @@ def developers(request):
     return render(request, 'myapp/developers.html', {})
 
 
-
+"""
 @csrf_exempt
 def User_list(request):
     if request.method == 'POST':
@@ -169,6 +171,7 @@ def checkans(request):
             strin = {'response':"0"}
             return JsonResponse(strin,safe=False)
     return JsonResponse(user.errors, status=400)
+"""
 
 @login_required
 def logs_data(request):
@@ -179,10 +182,10 @@ def logs_data(request):
         return HttpResponse('You are not authenticated.')
 
 
-
+"""
 def status(request):
     if request.method == "GET":
         return JsonResponse(1,safe = False) #coming soon
         return JsonResponse(2,safe = False) #started
         return JsonResponse(3,safe = False) #end
-
+"""
