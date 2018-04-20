@@ -83,10 +83,7 @@ def index(request):
     return render(request,'myapp/index.html',{})
 
 def leaderboard(request):
-    profiles = Profile.objects.all()
-    return render(request, 'myapp/leaderboard.html', {
-        'profiles': profiles,
-    })
+    return HttpResponseRedirect(reverse('myapp:index'))
 
 
 def my_logout(request):
