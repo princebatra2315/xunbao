@@ -8,7 +8,7 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
 
     # xunbao/login/
-    url(r'^login/$', views.login, name='login'),
+    url(r'^login/$', views.index, name='login'),
 
     # xunbao/leaderboard/
     url(r'^leaderboard/$', views.leaderboard, name='leaderboard'),
