@@ -80,7 +80,7 @@ def my_login(request):
     return render(request, 'myapp/register.html', {})"""
 
 def index(request):
-    return render(request,'index.html',{})
+    return render(request,'myapp/index.html',{})
 
 def leaderboard(request):
     profiles = Profile.objects.all()
