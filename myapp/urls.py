@@ -20,7 +20,7 @@ urlpatterns = [
     url(r'^developers/$', views.developers, name='developers'),
     
     #api's
-    url(r'^status/$', views.status),
+    #url(r'^status/$', views.status),
 
     url(r'^logs/$', views.logs_data),
 ]
