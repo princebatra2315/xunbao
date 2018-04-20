@@ -181,7 +181,6 @@ def logs_data(request):
     else:
         return HttpResponse('You are not authenticated.')
 
-
 """
 def status(request):
     if request.method == "GET":
