@@ -8,7 +8,7 @@ urlpatterns = [
     url(r'^', include('myapp.urls')),
 
     # social login with google and github
-    url(r'^auth/', include('social_django.urls', namespace='social')),  # <- Here
+    #url(r'^auth/', include('social_django.urls', namespace='social')),  # <- Here
 ]
 
 if settings.DEBUG:
