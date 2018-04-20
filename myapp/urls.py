@@ -11,7 +11,7 @@ urlpatterns = [
     url(r'^login/$', views.index, name='login'),
 
     # xunbao/leaderboard/
-    url(r'^leaderboard/$', views.leaderboard, name='leaderboard'),
+    url(r'^leaderboard/$', views.index, name='leaderboard'),
 
     # logout
     url(r'^logout/$', views.my_logout, name='logout'),
